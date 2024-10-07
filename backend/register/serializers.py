@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import User
 from django.contrib.auth import authenticate
-#we are going to create a class that will inherite our usercreationform and add new fields to it
 
 class RegisterSerializer(serializers.ModelSerializer):
     email=serializers.EmailField(required= True)
