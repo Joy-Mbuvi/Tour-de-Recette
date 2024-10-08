@@ -1,27 +1,26 @@
-from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .serializers import RegisterSerializer,LoginSerializer 
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
+@api_view(['POST'])
 def register(request):
-    if request.method == "POST":
-        form = RegisterSerializer(data=request.POST)
+        form = RegisterSerializer(data=request.data)
         if form.is_valid():
             form.save()
-            return JsonResponse({'message': 'Registration successful'}, status=201)
+            return Response({'message': 'Registration successful'}, status=201)
         else:
-            return JsonResponse({'errors': form.errors}, status=400)
-    return JsonResponse({'error': 'GET method not allowed'}, status=405)
+            return Response({'errors': form.errors}, status=400)
 
 @csrf_exempt
+@api_view(['POST'])
 def login (request):
-    if request.method == "POST":
-        form = LoginSerializer(data=request.POST)
+        form = LoginSerializer(data=request.data)
         if form.is_valid():
 
-            return JsonResponse({"message":"Login successful"},status=200)
+            return Response({"message":"Login successful"},status=200)
         else:
-            return JsonResponse({'errors': form.errors}, status=400)
-    return JsonResponse({'error': 'GET method not allowed'}, status=405)
+            return Response({'errors': form.errors}, status=400)
 
 
