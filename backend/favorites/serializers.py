@@ -5,6 +5,6 @@ from .models import Favourites
 class FavouritesSerializer(serializers.ModelSerializer):
  
  user=serializers.StringRelatedField()
-   class Meta:
+ class Meta:
     model=Favourites
     fields=['recipe_name','recipe_id','added_on','user']

@@ -27,6 +27,11 @@ class LoginSerializer(serializers.ModelSerializer):
     username = serializers.CharField()
     password= serializers.CharField(style={'input_type':'password'},write_only=True)
 
+
+    class Meta: 
+        model=User
+        fields=["username","password"]
+
     def validate(self,data):
         username=data.get('username')
         password=data.get('password')
@@ -35,4 +40,4 @@ class LoginSerializer(serializers.ModelSerializer):
         if not user:
             return serializers.ValidationError("Wrong Login Credentials")
         
-        return user
+        return data
