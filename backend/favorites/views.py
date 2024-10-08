@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 from .serializers import FavouritesSerializer  
-from .model import Favourites
+from .models import Favourites
 
 def add_to_favourites(request):      
     user = request.user.is_authenticated
@@ -31,7 +31,7 @@ def delete_favourites(request,recipe_name):
     if not user:
         return JsonResponse({'error':'not authenticated'}, status=401)
 
-    if request.method == 'DELETE'
+    if request.method == 'DELETE':
      try:
         faves=Favourites.objects.get(recipe_name=recipe_name,user=request.user)
         faves.delete()
