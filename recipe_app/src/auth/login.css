@@ -1,0 +1,61 @@
+.holder {
+    background-image: url('../assets/Almonds.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+}
+
+.head {
+    color: #c6e707; 
+    font-weight: bold; 
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.underline {
+    height: 2px;
+    background-color: #ffbf00; 
+    width: 50%;
+    margin: 0 auto; 
+}
+
+
+.fields {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+}
+nput field
+.field {
+    margin-bottom: 15px;
+}
+
+.press-container {
+    display: flex;             
+    justify-content: center;    
+    margin-top: 20px;        
+}
+
+.press {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;              
+    padding: 10px 20px;       
+    border: 2px solid #ffbf00; 
+    border-radius: 8px;    
+    font-size: 16px;           
+    cursor: pointer;          
+    transition: background-color 0.3s ease; 
+}
+
+.press:hover {
+    background-color: #ffbf00;  
+    color: #fff;                
+}

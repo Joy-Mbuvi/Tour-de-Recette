@@ -1,0 +1,53 @@
+.home-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-image: url('../assets/Marmelo - StudioSmall.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: rgb(4, 63, 12); 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    position: relative; 
+}
+
+.home-container h1 {
+    font-size: 5rem; 
+    margin: 20px 0; 
+    line-height: 1.2; 
+    text-align: center; 
+}
+
+.home-container p {
+    font-size: 3rem; 
+    margin-bottom: 30px; 
+    text-align: center; 
+    line-height: 1.5; 
+    color: rgb(122, 199, 250); 
+
+}
+
+.home-container .button-container {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex; 
+    gap: 10px; 
+}
+
+.button-container button {
+    padding: 8px 15px; 
+    font-size: 1rem; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.button-container button:hover {
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.03); 
+}
