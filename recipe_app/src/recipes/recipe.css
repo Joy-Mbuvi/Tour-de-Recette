@@ -1,0 +1,95 @@
+/* Tips container */
+.tip-container {
+    background-color: #eb8989;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 20px;
+    max-width: 200px;
+    margin-left: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; 
+}
+
+.add-tip-form {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 20px;
+    max-width: 200px;
+    margin-left: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px; 
+}
+
+h2 {
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+
+.tip {
+    font-size: 1.2rem; 
+    margin: 15px 0; 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.tip.fade-in {
+    opacity: 1; 
+}
+
+.tip-controls {
+    margin-top: 20px; 
+}
+
+.add-tip-form textarea {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 1rem;
+}
+
+.add-tip-form button {
+    background-color: #eb8989; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-tip-form button:hover {
+    background-color: #d16a6a; 
+}
+
+.recipe-container {
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: space-between; 
+    padding: 20px;
+  }
+  
+  .tips-container {
+    flex: 3; 
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .spoon-container {
+    flex: 1; 
+    text-align: right; 
+  }
+  
+  .large-spoon {
+    font-size: 350px; 
+    color: #d6e593;
+    transform: rotate(315deg); 
+    margin-top: 20px; 
+  }
+  

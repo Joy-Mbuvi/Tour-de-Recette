@@ -20,7 +20,9 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('register.urls')), 
-    path('favorites',include('favorites.urls'))
+    path('favorites/',include('favorites.urls')),
+    path('tips/', include('favorites.urls')),  # Include only the tips URLs in 'favorites/urls.py'
+
 
 
 ]
