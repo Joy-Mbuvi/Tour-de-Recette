@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Favourites,CookingTips
+from .models import Favourites
 
 
 class FavouritesSerializer(serializers.ModelSerializer):
@@ -11,7 +11,3 @@ class FavouritesSerializer(serializers.ModelSerializer):
 
 
 
-class CookingTipSerializer(serializers.ModelSerializer):
-  class Meta:
-    model=CookingTips
-    fields=['tip','category','created_at']

@@ -1,7 +1,8 @@
+
 from django.urls import path
-from . import views
+from .views import register, CustomTokenObtainPairView
 
 urlpatterns = [
-    path('register/', views.register, name='register'),  # API endpoint for user registration
-    path('login/',views.login,name='login')
+    path('register/', register, name='register'),
+    path('login/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
 ]
