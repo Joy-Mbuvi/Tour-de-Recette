@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('register.urls')), 
     path('favorites/',include('favorites.urls')),
-    path('tips/', include('favorites.urls')),
+    path('tips/', include('tips.urls')),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 

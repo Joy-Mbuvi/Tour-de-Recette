@@ -1,11 +1,9 @@
 
 
 from django.urls import path
-from . import views
+from .views import get_tips,new_cooking_tips
 
-
-
-[
-   path('tips/',views.get_tips,name='tips'),
-    path('tips/new/',views.new_cooking_tips,name='new_tips') 
+urlpatterns =[
+    path('',get_tips,name='tips'),
+    path('new/',new_cooking_tips,name='new_tips')
 ]
