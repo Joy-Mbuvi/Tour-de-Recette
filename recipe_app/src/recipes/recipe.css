@@ -1,15 +1,76 @@
-/* Tips container */
-.tip-container {
-    background-color: #eb8989;
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
+/* .recipe-background{
+
+    background-color: #f8bebe;
+} */
+.dashboard {
+    background-color: #ca9dd4;
+    color: #0d0b6e;
     padding: 20px;
-    max-width: 200px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.dashboard-header {
+    background-color: rgba(226, 197, 238, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #4caf50;
+}
+
+.search-bar input::placeholder {
+    font-style: italic;
+    color: #aaa;
+}
+
+.search-icon {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+
+.tip-container {
+    background-color: #f0fab5; 
+    border: 2px solid #4caf50; 
+    padding: 20px; 
     margin-left: 20px; 
     text-align: center; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     flex: 1; 
+    border-radius: 10px; 
+    display: inline-block; 
+    min-width: 150px; 
+    max-width: 470px;
 }
+
+
+
 
 .add-tip-form {
     background-color: #f9f9f9; 
@@ -24,7 +85,7 @@
 }
 
 h2 {
-    color: #333; 
+    color: #e944ba; 
     margin-bottom: 10px; 
 }
 
@@ -32,41 +93,54 @@ h2 {
 .tip {
     font-size: 1.2rem; 
     margin: 15px 0; 
-    opacity: 0; 
-    transition: opacity 0.5s ease; 
+    color: #9c0b17;
 }
 
-.tip.fade-in {
-    opacity: 1; 
-}
 
 .tip-controls {
     margin-top: 20px; 
 }
 
 .add-tip-form textarea {
-    width: 100%; 
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd; 
-    border-radius: 5px; 
+    width: 70%; 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    border: 1px solid #398606; 
+    border-radius: 8px; 
     font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s ease; 
+}
+
+.add-tip-form textarea:focus {
+    border-color: #4caf50; 
+    outline: green; 
 }
 
 .add-tip-form button {
-    background-color: #eb8989; 
-    color: white;
+    background-color: #ff6b6b; 
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 8px; 
+    padding: 12px 24px; 
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .add-tip-form button:hover {
     background-color: #d16a6a; 
+    transform: translateY(-2px);
 }
+
+.add-tip-form button:active {
+    transform: translateY(0); 
+}
+
+
+
 
 .recipe-container {
     display: flex; 
@@ -81,15 +155,5 @@ h2 {
     flex-direction: column; 
   }
   
-  .spoon-container {
-    flex: 1; 
-    text-align: right; 
-  }
   
-  .large-spoon {
-    font-size: 350px; 
-    color: #d6e593;
-    transform: rotate(315deg); 
-    margin-top: 20px; 
-  }
   
