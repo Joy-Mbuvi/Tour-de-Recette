@@ -25,40 +25,48 @@ const Search = () => {
         },
       });
 
-      setResults(response.data.hits);  
+      setResults(response.data.hits);
+      setQuery("")  
     } catch (error) {
       console.error('Error fetching recipes:', error);
     }
   };
 
   return (
-    <div className='search-bar'>
-      <input 
-        type="text" 
-        value={query} 
-        onChange={(e) => setQuery(e.target.value)} 
-        placeholder="Search for recipes..." 
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') {
-            searchbar();  // Call searchbar on pressing Enter key
-          }
-        }}
-      />
-      <FiSearch 
-        className="search-icon"
-        onClick={searchbar}  // Trigger search on clicking the icon
-        style={{ cursor: 'pointer' }}  // Make the icon clickable
-      />
+    <div className='search-container'>
+  <div className='search-bar'>
+    <input 
+      type="text" 
+      value={query} 
+      onChange={(e) => setQuery(e.target.value)} 
+      placeholder="Search for recipes..." 
+      onKeyPress={(e) => {
+        if (e.key === 'Enter') {
+          searchbar();
+        }
+      }}
+    />
+    <FiSearch 
+      className="search-icon"
+      onClick={searchbar}  
+      style={{ cursor: 'pointer' }}
+    />
+  </div>
 
-      <div>
-        {results.map((item, index) => (
-          <div key={index}>
-            <h3>{item.recipe.label}</h3>  
-            {/* <img src={item.recipe.image} alt={item.recipe.label} /> Recipe image */}
-          </div>
-        ))}
+  <div className='results-container'>
+    {results.map((item, index) => (
+      <div key={index}>
+        <h6>{item.recipe.label}</h6>  
+        <img
+          src={item.recipe.image}
+          alt={item.recipe.label}
+          style={{ width: '100px', height: 'auto' }}
+        />
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
   );
 }
 

@@ -1,5 +1,5 @@
 .container {
-    background-image: url('../assets/See\ ROSE\ Go.jpeg'); 
+    background-image: url('../assets/print.jpeg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -28,7 +28,7 @@
 }
 
   .inputs {
-    background-color: rgba(255, 255, 255, 0.911); 
+    background-color: rgba(241, 230, 71, 0.911); 
     padding: 20px;
     border-radius: 10px;
     display: flex;                   

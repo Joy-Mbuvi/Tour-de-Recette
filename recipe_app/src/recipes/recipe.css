@@ -1,7 +1,7 @@
-/* .recipe-background{
+.recipe-background{
+    background-color: rgb(252, 243, 228);
 
-    background-color: #f8bebe;
-} */
+}
 .dashboard {
     background-color: #ca9dd4;
     color: #0d0b6e;
@@ -18,7 +18,7 @@
 }
 
 .search-bar {
-    position: absolute;
+    position: fixed;
     top: 200px;
     right: 20px;
     background-color: #fff;
@@ -29,6 +29,37 @@
     display: flex;
     align-items: center;
 }
+/* Container that wraps search bar and results together */
+/* .search-results-container {
+    position: fixed;
+    top: 200px; /* Adjust based on your dashboard height */
+    /* right: 20px;
+    max-width: 300px;
+    background-color: #fff;
+} */ */
+
+/* Search bar styling */
+.search-bar {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adds space between search bar and results */
+}
+
+/* Results container styling */
+.results-container {
+    display: contents;
+    flex-direction: column;
+    align-items: flex-start; /* Align results to the start (left) within the container */
+    background-color: rgb(203, 238, 247); /* Matches the recipe background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 .search-bar input {
     width: 100%;
@@ -54,7 +85,15 @@
     color: #555;
 }
 
-
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+  }
+  
+  
+  
+  
 .tip-container {
     background-color: #f0fab5; 
     border: 2px solid #4caf50; 

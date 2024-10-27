@@ -22,7 +22,6 @@ def get_tips(request):
 def new_cooking_tips(request):
     new_tip = CookingTipSerializer(data=request.data)  
     if new_tip.is_valid():
-            new_tip.create() 
             new_tip.save() 
             return Response({'message': 'New cooking Tip added'}, status=201)  
     else:

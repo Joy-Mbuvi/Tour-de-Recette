@@ -1,6 +1,6 @@
 .holder {
-    background-image: url('../assets/Almonds.jpeg'); 
-    background-size: cover; 
+    background-image: url('../assets/download\ \(8\).jpeg'); 
+    background-size: contain; 
     background-position: center; 
     background-repeat: no-repeat; 
     width: 100%;
@@ -29,11 +29,11 @@
 
 
 .fields {
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(240, 108, 108, 0.9); 
     padding: 20px;
     border-radius: 10px;
 }
-nput field
+input field
 .field {
     margin-bottom: 15px;
 }
