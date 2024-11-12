@@ -4,6 +4,7 @@ import Register from "./auth/register";
 import Login from "./auth/login";
 import Recipe from './recipes/recipe';
 import Home from './home/home';
+import Favorites from './recipes/favouritesCard';
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path='/recipe' element={<Recipe/>}/>
+          <Route path ='/favourites'element={<Favorites/>}/>
         </Routes>
       </Router>
 

@@ -1,27 +1,37 @@
-.recipe-background{
-    background-color: rgb(252, 243, 228);
 
+.dashboard-wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Makes the wrapper take the full height of the screen */
 }
 .dashboard {
-    background-color: #ca9dd4;
-    color: #0d0b6e;
-    padding: 20px;
+    background-color: #164d0f;
+    color: #0c0e00;
+    font-family: 'Brush Script MT', cursive;
+    font-size: x-large;
+    padding: 5px;
     text-align: center;
     border-radius: 10px;
+    width: 600px;
+    height: auto;
+    box-sizing: border-box;
 
 }
 
 .dashboard-header {
-    background-color: rgba(226, 197, 238, 0.8);
+    background-color: rgba(238, 145, 129, 0.959);
     padding: 20px;
     border-radius: 10px;
+    width: 600x;
+    ;
 }
 
 .search-bar {
-    position: fixed;
-    top: 200px;
+    position:relative;
+    top: 3px;
     right: 20px;
-    background-color: #fff;
+    background-color: #aff188;
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -40,7 +50,7 @@
 
 /* Search bar styling */
 .search-bar {
-    background-color: #fff;
+    background-color: #b47986;
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -54,7 +64,7 @@
     display: contents;
     flex-direction: column;
     align-items: flex-start; /* Align results to the start (left) within the container */
-    background-color: rgb(203, 238, 247); /* Matches the recipe background */
+    background-color: rgb(171, 214, 224); /* Matches the recipe background */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -71,7 +81,7 @@
 }
 
 .search-bar input:focus {
-    border-color: #4caf50;
+    border-color: #44031c;
 }
 
 .search-bar input::placeholder {
@@ -91,96 +101,172 @@
     align-items: center; /* Center the items horizontally */
   }
   
-  
-  
-  
-.tip-container {
-    background-color: #f0fab5; 
-    border: 2px solid #4caf50; 
-    padding: 20px; 
-    margin-left: 20px; 
-    text-align: center; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    flex: 1; 
-    border-radius: 10px; 
-    display: inline-block; 
-    min-width: 150px; 
-    max-width: 470px;
-}
-
-
-
-
-.add-tip-form {
-    background-color: #f9f9f9; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
+  /* Recipe grid styling */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 20px;
-    max-width: 200px;
-    margin-left: 20px; 
-    text-align: center; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    margin-top: 20px; 
-}
-
-h2 {
-    color: #e944ba; 
-    margin-bottom: 10px; 
-}
-
-
-.tip {
-    font-size: 1.2rem; 
-    margin: 15px 0; 
-    color: #9c0b17;
-}
-
-
-.tip-controls {
-    margin-top: 20px; 
-}
-
-.add-tip-form textarea {
-    width: 70%; 
-    padding: 12px; 
-    margin-bottom: 20px; 
-    border: 1px solid #398606; 
-    border-radius: 8px; 
-    font-size: 1rem;
-    font-family: 'Arial', sans-serif;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: border-color 0.3s ease; 
-}
-
-.add-tip-form textarea:focus {
-    border-color: #4caf50; 
-    outline: green; 
-}
-
-.add-tip-form button {
-    background-color: #ff6b6b; 
+  }
+ 
+  /* Individual recipe cards */
+  .recipe-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .recipe-card img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .recipe-card button {
+    background-color: #4CAF50;
+    color: rgb(223, 217, 217);
     border: none;
-    border-radius: 8px; 
-    padding: 12px 24px; 
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    font-family: 'Arial', sans-serif; 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
+    transition: background-color 0.3s;
+  }
+  
+  .recipe-card button:hover {
+    background-color: #45a049;
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .recipe-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
+  
+  /* Container for the tips section */
+  .tips-container {
+    position: absolute;
+    top: 150px;       /* Adjust vertical position as needed */
+    right: 20px;     /* Move it 20px from the right edge of the page */
+    background-color: #f7db90;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(238, 236, 236, 0.966);
+    max-width: 250px;
+    color: #333;
+  }
+  
+/* Title for the tips section */
+.tips-container h2 {
+    font-size: 24px;
+    font-family: fantasy;
+    font-weight: bold;
+    color: #ee2727;
+    margin-bottom: 15px;
+    text-align: left; /* Ensures title is left-aligned */
+}
+
+/* Container for displaying the current tip */
+.tip-container {
+    background-color: #f5ed84;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%;
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Styling for the individual tip text */
+.tip {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Form for adding a new tip */
+.add-tip-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+/* Text area for new tip input */
+.add-tip-form textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ec1539;
+    resize: vertical;
+    margin-bottom: 10px;
+    outline: none;
+    color: #070008;
+}
+
+/* Submit button for adding a new tip */
+.add-tip-form button {
+    background-color: #76b7da;
+    color: rgb(250, 181, 216);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self:center; /* Aligns the button to the left */
 }
 
 .add-tip-form button:hover {
-    background-color: #d16a6a; 
-    transform: translateY(-2px);
+    background-color: #357abd;
 }
 
-.add-tip-form button:active {
-    transform: translateY(0); 
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+    .tips-container {
+        padding: 15px;
+        left: 0; /* Removes left space for smaller screens */
+    }
+
+    .tips-container h2 {
+        font-size: 20px;
+    }
+
+    .tip {
+        font-size: 16px;
+    }
+
+    .add-tip-form textarea {
+        font-size: 14px;
+    }
+
+    .add-tip-form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
 
-
-
-
+  
 .recipe-container {
     display: flex; 
     align-items: flex-start; 

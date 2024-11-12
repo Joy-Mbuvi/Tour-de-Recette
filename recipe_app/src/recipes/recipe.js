@@ -1,8 +1,12 @@
 import React from 'react'
-import Tips from './tips'
-import Addtips from './addtips'
+import TipWithAddTip from './tipswithasstip'
 import Dashboard from './dashboard'
 import Search from './search'
+import RecipeListing from './recipecard'
+import { FavoritesProvider } from '../context/favouritescontext'
+import Favorites from './favouritesCard'
+
+
 
 const Recipe = () => {
   return (
@@ -11,13 +15,14 @@ const Recipe = () => {
         <Dashboard/>
         <br/>
         <br/>
-        <Tips />
-        <Addtips />
+        <TipWithAddTip />
         <Search/>
+        <FavoritesProvider>
+             <RecipeListing/>
+             <Favorites/>
+        </FavoritesProvider>
       </div>
-      <div className="spoon-container">
       </div>
-    </div>
   )
 }
 

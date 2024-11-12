@@ -3,11 +3,12 @@ import './recipe.css';
 
 const Dashboard = () => {
     return (
-        <div className="dashboard">
+        <div className="dashboard-wrapper">
+            <div className='dashboard'>
             <header className="dashboard-header">
-                <h1>Welcome to Your Cooking Adventure!</h1>
+                <h1>Tour De Recettes </h1>
             </header>
-    
+            </div>
         </div>
     );
 };
