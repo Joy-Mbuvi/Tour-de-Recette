@@ -1,4 +1,4 @@
-from rest_framework.decorators import api_view,permission_classes
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import FavouritesSerializer
 from .models import Favourites
@@ -21,7 +21,7 @@ def get_favourites(request):
     if not user:
         return Response({'error':'not authenticated'}, status=401)
 
-    favs= Favourites.objects.filter(user=request.user)
+    favs= Favourites.objects.filter(user=request.user)#by the user ,so that the backend does not send all the other authenticated users favourites
     serializer=FavouritesSerializer(favs,many=True)
     return Response(serializer.data,status=200)
 
