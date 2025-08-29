@@ -21,7 +21,7 @@ class Command(BaseCommand):
            data = response.json()
 
     
-           for hit in data['hits'][:14]:  # Fixed: hit not hits
+           for hit in data['hits'][:14]:  
             recipe_data= hit['recipe'] # getting recipe details
 
             #loading recipe details into the database
@@ -42,9 +42,9 @@ class Command(BaseCommand):
             )
             #terminal feedback, to ensure proper loading has been done
 
-            if created:
-                self.stdout.write (f"Added :{recipe.recipe_title}")
-            else:
-                self.stdout.write(f"Already exists :{recipe.recipe_title}")
+        #     if created:
+        #         self.stdout.write (f"Added :{recipe.recipe_title}")
+        #     else:
+        #         self.stdout.write(f"Already exists :{recipe.recipe_title}")
     
-        self.stdout.write(self.style.SUCCESS('Successfully loaded recipes'))
+        # self.stdout.write(self.style.SUCCESS('Successfully loaded recipes'))
