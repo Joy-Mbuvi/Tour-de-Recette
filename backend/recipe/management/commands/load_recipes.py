@@ -43,8 +43,8 @@ class Command(BaseCommand):
             #terminal feedback, to ensure proper loading has been done
 
             if created:
-                self.stdout.write (f"Added :{recipe.title}")
+                self.stdout.write (f"Added :{recipe.recipe_title}")
             else:
-                self.stdout.write(f"Already exists :{recipe.title}")
+                self.stdout.write(f"Already exists :{recipe.recipe_title}")
     
         self.stdout.write(self.style.SUCCESS('Successfully loaded recipes'))
